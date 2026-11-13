@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "specpair"
+version = "0.1.0"
+description = "Check whether a draft model can speculate for a target model (GGUF headers or HF tokenizers) and measure the real speedup on llama-server."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "LeeGyeongPil" }]
+keywords = ["llama.cpp", "gguf", "speculative-decoding", "draft-model", "llama-server", "tokenizer"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Testing",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/LeeGyeongPil/specpair"
+Issues = "https://github.com/LeeGyeongPil/specpair/issues"
+Changelog = "https://github.com/LeeGyeongPil/specpair/blob/main/CHANGELOG.md"
+
+[project.scripts]
+specpair = "specpair.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "gguf==0.19.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/specpair"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/specpair", "tools", "tests", "README.md", "README.ko.md", "CHANGELOG.md", "LICENSE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

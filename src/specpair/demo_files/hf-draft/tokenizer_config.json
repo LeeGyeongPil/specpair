@@ -1,0 +1,5 @@
+{
+ "bos_token": "<|endoftext|>",
+ "chat_template": "TARGET {{ messages }}",
+ "eos_token": "<|im_end|>"
+}

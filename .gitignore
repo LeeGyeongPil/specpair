@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+.next/
+
+# 실행 산출물·모델·데이터 캐시
+runs/
+outputs/
+.cache/
+*.safetensors
+*.gguf
+*.bin
+
+# 환경·비밀
+.env
+.env.*
+!.env.example
+
+# OS·에디터
+.DS_Store
+.vscode/
+.idea/
+
+# Flutter·Dart
+.dart_tool/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+coverage/
+
+# 번들 데모 파일(합성 헤더 전용 GGUF, 수 KB)은 추적한다
+!src/specpair/demo_files/*.gguf
+
+# 연습용 파일을 README 명령으로 꺼낸 폴더
+/demo-files/

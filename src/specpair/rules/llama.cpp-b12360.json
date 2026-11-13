@@ -1,0 +1,27 @@
+{
+  "id": "llama.cpp@b12360",
+  "build": "b12360",
+  "max_size_diff": 128,
+  "check_start_id": 5,
+  "vocab_types": {"llama": "SPM", "gpt2": "BPE", "bert": "WPM", "t5": "UGM", "rwkv": "RWKV"},
+  "bpe_add_bos_pre": [
+    "llama3", "llama-v3", "llama-bpe", "falcon3", "falcon-h1", "midm-2.0", "jina-v5-nano",
+    "lfm2", "tekken", "pixtral", "tekken-num3", "chameleon", "nemotron-3.5-embed"
+  ],
+  "force_add_bos_pre": ["gemma4"],
+  "default_special_ids": {
+    "SPM": {"bos": 1, "eos": 2},
+    "BPE": {"bos": 11, "eos": 11},
+    "WPM": {"bos": 101, "eos": null},
+    "UGM": {"bos": null, "eos": 1},
+    "RWKV": {"bos": null, "eos": null}
+  },
+  "dedicated_head_arch_hints": ["eagle", "mtp", "dflash", "medusa"],
+  "recommended": {"spec_type": "draft-simple", "spec_draft_n_max": 3},
+  "removed_flags": ["--draft-max", "--draft-min", "--draft"],
+  "sources": [
+    {"url": "https://github.com/ggml-org/llama.cpp/blob/master/common/speculative.cpp", "checked": "2026-11-13"},
+    {"url": "https://github.com/ggml-org/llama.cpp/blob/master/src/llama-vocab.cpp", "checked": "2026-11-13"},
+    {"url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12360", "checked": "2026-11-13"}
+  ]
+}

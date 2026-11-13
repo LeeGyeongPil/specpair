@@ -1,0 +1,121 @@
+{
+ "configs": [
+  {
+   "label": "baseline",
+   "records": [
+    {
+     "predicted_ms": 1972.694,
+     "predicted_n": 128,
+     "prompt_ms": 78.878,
+     "prompt_n": 15
+    },
+    {
+     "predicted_ms": 560.073,
+     "predicted_n": 35,
+     "prompt_ms": 49.108,
+     "prompt_n": 17
+    },
+    {
+     "predicted_ms": 1138.177,
+     "predicted_n": 77,
+     "prompt_ms": 46.255,
+     "prompt_n": 11
+    }
+   ],
+   "role": "base"
+  },
+  {
+   "label": "n3",
+   "records": [
+    {
+     "draft_n": 107,
+     "draft_n_accepted": 91,
+     "predicted_ms": 1694.032,
+     "predicted_n": 128,
+     "prompt_ms": 140.556,
+     "prompt_n": 15
+    },
+    {
+     "draft_n": 30,
+     "draft_n_accepted": 24,
+     "predicted_ms": 459.28,
+     "predicted_n": 35,
+     "prompt_ms": 64.782,
+     "prompt_n": 17
+    },
+    {
+     "draft_n": 93,
+     "draft_n_accepted": 45,
+     "predicted_ms": 1342.977,
+     "predicted_n": 77,
+     "prompt_ms": 55.477,
+     "prompt_n": 11
+    }
+   ],
+   "role": "spec"
+  },
+  {
+   "label": "n8",
+   "records": [
+    {
+     "draft_n": 165,
+     "draft_n_accepted": 105,
+     "predicted_ms": 2362.558,
+     "predicted_n": 128,
+     "prompt_ms": 97.307,
+     "prompt_n": 15
+    },
+    {
+     "draft_n": 40,
+     "draft_n_accepted": 29,
+     "predicted_ms": 528.974,
+     "predicted_n": 35,
+     "prompt_ms": 92.902,
+     "prompt_n": 17
+    },
+    {
+     "draft_n": 192,
+     "draft_n_accepted": 52,
+     "predicted_ms": 2327.042,
+     "predicted_n": 77,
+     "prompt_ms": 53.509,
+     "prompt_n": 11
+    }
+   ],
+   "role": "spec"
+  },
+  {
+   "derived_from": "baseline",
+   "label": "rejected",
+   "records": [
+    {
+     "predicted_ms": 1972.694,
+     "predicted_n": 128,
+     "prompt_ms": 78.878,
+     "prompt_n": 15
+    },
+    {
+     "predicted_ms": 560.073,
+     "predicted_n": 35,
+     "prompt_ms": 49.108,
+     "prompt_n": 17
+    },
+    {
+     "predicted_ms": 1138.177,
+     "predicted_n": 77,
+     "prompt_ms": 46.255,
+     "prompt_n": 11
+    }
+   ],
+   "role": "spec"
+  }
+ ],
+ "content_placeholder": "(placeholder text: replayed servers return no real model output)",
+ "format": 1,
+ "prompts": [
+  "Write a Python function that returns the first n Fibonacci numbers as a list.",
+  "List the planets of the solar system in order from the sun, one per line.",
+  "Explain in three sentences what a hash map is."
+ ],
+ "recorded_with": "llama.cpp b12360, CPU 4 threads, Qwen2.5-1.5B-Instruct q4_0 + Qwen2.5-0.5B-Instruct q4_0 draft, n_predict 128, temperature 0, 2026-11-13"
+}
