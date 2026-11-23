@@ -29,12 +29,16 @@ Think of two interpreters at a meeting: the fast one can only guess ahead if bot
 # uv (Python package runner): https://docs.astral.sh/uv/
 curl -LsSf https://astral.sh/uv/install.sh | sh
 # run without installing
-uvx --from git+https://github.com/LeeGyeongPil/specpair specpair --version
+uvx specpair --version
 # or install the command
-uv tool install git+https://github.com/LeeGyeongPil/specpair
+uv tool install specpair
+# or with pip
+pip install specpair
 ```
 
-Python 3.10 or newer; no other packages. On a minimal Linux image you also need `git` and `curl` for the commands above. The rest of this page assumes the `specpair` command is on your PATH.
+To use the latest `main` instead (only this needs `git`): `uv tool install git+https://github.com/LeeGyeongPil/specpair`
+
+Python 3.10 or newer; no other packages. On a minimal Linux image the uv install script needs `curl`. The rest of this page assumes the `specpair` command is on your PATH.
 
 ## Quick start (practice mock)
 
@@ -256,7 +260,7 @@ Exit codes: 0 fine, 1 a verdict failure (rejected pair, no usable draft in `scan
 Install it into your project environment first (the `uvx` and `uv tool install` commands above keep it in an isolated tool environment):
 
 ```bash
-uv pip install git+https://github.com/LeeGyeongPil/specpair
+uv pip install specpair
 ```
 
 ```python

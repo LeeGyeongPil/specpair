@@ -29,12 +29,16 @@ llama-server 에 드래프트 모델을 붙여 본 사람이 흔히 놀라는 �
 # uv (Python 패키지 실행기): https://docs.astral.sh/uv/
 curl -LsSf https://astral.sh/uv/install.sh | sh
 # 설치 없이 실행
-uvx --from git+https://github.com/LeeGyeongPil/specpair specpair --version
+uvx specpair --version
 # 또는 명령으로 설치
-uv tool install git+https://github.com/LeeGyeongPil/specpair
+uv tool install specpair
+# 또는 pip 로
+pip install specpair
 ```
 
-Python 3.10 이상이면 되고 다른 패키지는 필요 없습니다. 최소 리눅스 이미지에서는 위 명령에 `git` 과 `curl` 이 필요합니다. 아래 설명은 `specpair` 명령이 PATH 에 있다고 가정합니다.
+최신 `main` 을 쓰려면(이때만 `git` 이 필요합니다): `uv tool install git+https://github.com/LeeGyeongPil/specpair`
+
+Python 3.10 이상이면 되고 다른 패키지는 필요 없습니다. 최소 리눅스 이미지에서는 uv 설치 스크립트에 `curl` 이 필요합니다. 아래 설명은 `specpair` 명령이 PATH 에 있다고 가정합니다.
 
 ## 빠르게 시작하기 (연습용 목 모드)
 
@@ -248,7 +252,7 @@ specpair check --json demo-files/target.gguf demo-files/draft-wide.gguf
 먼저 프로젝트 환경에 설치합니다(위의 `uvx`·`uv tool install` 은 격리된 도구 환경에만 설치합니다).
 
 ```bash
-uv pip install git+https://github.com/LeeGyeongPil/specpair
+uv pip install specpair
 ```
 
 ```python
